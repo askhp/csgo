@@ -1,0 +1,8 @@
+# This is a gitignore file for my csgo options.
+# Created: 2022/05/15 11:16:37
+# Last Modified: 2022/05/15 11:28:14
+
+!/cfg/autoexec.cfg
+!/cfg/config/*
+!/resource/csgo_colormod.txt
+!/resource/ui/radiopanel.txt
