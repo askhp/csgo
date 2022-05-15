@@ -1,2 +1,2 @@
 # csgo
-Clone this repository into the ```Steam\steamapps\common\Counter-Strike Global Offensive``` directory.
+Drag and drop this repository into the ```Steam\steamapps\common\Counter-Strike Global Offensive``` directory.
