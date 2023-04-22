@@ -1,12 +1,3 @@
-// Improved Radio Mod by Maxim - Current Version 2.4
-//
-// 2015-12-14 - Version 1.0:
-// Added Radio, Training and Bot features 
-// 2017-01-02 - Version 2.0-2.3:
-// Re-added Bot Menu for Danger Zone Update, Removed bhop cvars, say from 'Enable Training' & shortened "Need a drop!" to just "Drop"
-// 2022-04-21 - Version 2.4:
-// Replaced round cvars with ignore round condition, restart game with cast ray, clear decals with rethrow last grenade & optimized impact & trajectory.
-
 "RadioPanel.txt"
 {
 
@@ -18,6 +9,124 @@
 		"common"
 		{
 			"hotkey"	"0"
+			"title"	"Radio Menu"
+			"timeout"	"5"
+
+			"Commands"
+			{
+				"roger"
+				{
+					"hotkey"	"1"
+					"label"	"Yes"
+					"cmd"	"roger"
+				}
+				
+				"negative"
+				{
+					"hotkey"	"2"
+					"label"	"No"
+					"cmd"	"negative"
+				}
+				
+				"needbackup"
+				{
+					"hotkey"	"3"
+					"label"	"Help"
+					"cmd"	"needbackup"
+				}
+				
+				"holdpos"
+				{
+					"hotkey"	"4"
+					"label"	"Hold"
+					"cmd"	"holdpos"
+				}
+				
+				"go"
+				{
+					"hotkey"	"5"
+					"label"	"Go"
+					"cmd"	"go"
+				}
+				
+				"thanks"
+				{
+					"hotkey"	"6"
+					"label"	"Thanks"
+					"cmd"	"thanks"
+				}
+				
+				"cheer"
+				{
+					"hotkey"	"7"
+					"label"	"Cheer"
+					"cmd"	"cheer"
+				}
+				
+				"sorry"
+				{
+					"hotkey"	"8"
+					"label"	"Sorry"
+					"cmd"	"sorry; say_team sorry"
+				}
+				
+				"needrop"
+				{
+					"hotkey"	"9"
+					"label"	"Drop"
+					"cmd"	"needrop; say_team drop gun pls"
+				}
+			}
+		}
+
+		"standard"
+		{
+			"hotkey"	"1"
+			"title"	"#SFUI_CommandRadio"
+			"timeout"	"5"
+			
+			"Commands"
+			{
+				"go"
+				{
+					"hotkey"	"1"
+					"label"	"#SFUI_Radio_Go"
+					"cmd"	"go"
+				}
+				
+				"fallback"
+				{
+					"hotkey"	"2"
+					"label"	"#SFUI_Radio_Fall_Back"
+					"cmd"	"fallback"
+				}
+				
+				"sticktog"
+				{
+					"hotkey"	"3"
+					"label"	"#SFUI_Radio_Stick_Together"
+					"cmd"	"sticktog"
+				}
+				
+				"holdpos"
+				{
+					"hotkey"	"4"
+					"label"	"#SFUI_Radio_Hold_Pos"
+					"cmd"	"holdpos"
+				}
+				
+				"followme"
+				{
+					"hotkey"	"5"
+					"label"	"#SFUI_Radio_Follow"
+					"cmd"	"followme"
+				}
+			}
+		}
+		
+		"group"
+		{
+			"hotkey"	"2"
 			"title"	"Offline Menu"
 			"timeout"	"5"
 
@@ -83,15 +192,14 @@
 				{
 					"hotkey"	"9"
 					"label"	"Enable Practice"
-					"cmd"	"sv_cheats 1; mp_forcecamera 0; mp_respawn_on_death_ct 1; mp_respawn_on_death_t 1; mp_solid_teammates 1; mp_limitteams 0; mp_autoteambalance 0; mp_spectators_max 10; mp_ignore_round_win_conditions 1; mp_maxmoney 60000; mp_startmoney 60000; mp_freezetime 0; mp_buytime 999999999; mp_buy_anywhere 1; mp_radar_showall 1; sv_infinite_ammo 2; ammo_grenade_limit_total 5; bot_kick; mp_warmup_end; mp_restartgame 1"
+					"cmd"	"sv_cheats 1; mp_respawn_on_death_ct 1; mp_respawn_on_death_t 1; mp_forcecamera 0; mp_respawn_on_death_ct 1; mp_respawn_on_death_t 1; mp_solid_teammates 1; mp_limitteams 0; mp_autoteambalance 0; mp_spectators_max 10; mp_ignore_round_win_conditions 1; mp_maxmoney 60000; mp_startmoney 60000; mp_freezetime 0; mp_buytime 999999999; mp_buy_anywhere 1; mp_radar_showall 1; sv_infinite_ammo 1; ammo_grenade_limit_total 5; bot_stop 1; mp_warmup_end; mp_restartgame 1"
 				}
-
 			}
 		}
-
-		"standard"
+		
+		"report"
 		{
-			"hotkey"	"1"
+			"hotkey"	"3"
 			"title"	"Bot Menu"
 			"timeout"	"5"
 			
@@ -158,153 +266,7 @@
 					"hotkey"	"9"
 					"label"	"Kick all bots"
 					"cmd"	"bot_kick"
-				}
-			}
-		}
-		
-		"group"
-		{
-			"hotkey"	"2"
-			"title"	"Radio Menu"
-			"timeout"	"5"
-			
-			"Commands"
-			{
-				"roger"
-				{
-					"hotkey"	"1"
-					"label"	"Yes"
-					"cmd"	"roger"
-				}
-				
-				"negative"
-				{
-					"hotkey"	"2"
-					"label"	"No"
-					"cmd"	"negative"
-				}
-				
-				"needbackup"
-				{
-					"hotkey"	"3"
-					"label"	"Help"
-					"cmd"	"needbackup"
-				}
-				
-				"hold"
-				{
-					"hotkey"	"4"
-					"label"	"Hold"
-					"cmd"	"holdpos"
-				}
-				
-				"go"
-				{
-					"hotkey"	"5"
-					"label"	"Go"
-					"cmd"	"go"
-				}
-				
-				"thanks"
-				{
-					"hotkey"	"6"
-					"label"	"Thanks"
-					"cmd"	"thanks"
-				}
-
-				"cheer"
-				{
-					"hotkey"	"7"
-					"label"	"Cheer"
-					"cmd"	"cheer"
-				}	
-				
-				"sorry"
-				{
-					"hotkey"	"8"
-					"label"	"Sorry"
-					"cmd"	"sorry; say_team sorry"
-				}	
-
-				"askfordrop"
-				{
-					"hotkey"	"9"
-					"label"	"Drop"
-					"cmd"	"needrop; say_team drop gun"
-				}
-			}
-		}
-		
-		"report"
-		{
-			"hotkey"	"3"
-			"title"	"Radio Menu"
-			"timeout"	"5"
-			
-			"Commands"
-			{
-				"roger"
-				{
-					"hotkey"	"1"
-					"label"	"Yes"
-					"cmd"	"roger"
-				}
-				
-				"negative"
-				{
-					"hotkey"	"2"
-					"label"	"No"
-					"cmd"	"negative"
-				}
-				
-				"needbackup"
-				{
-					"hotkey"	"3"
-					"label"	"Help"
-					"cmd"	"needbackup"
-				}
-				
-				"sectorclear"
-				{
-					"hotkey"	"4"
-					"label"	"Hold"
-					"cmd"	"holdpos"
-				}
-				
-				"go"
-				{
-					"hotkey"	"5"
-					"label"	"Go"
-					"cmd"	"go"
-				}
-				
-				"thanks"
-				{
-					"hotkey"	"6"
-					"label"	"Thanks"
-					"cmd"	"thanks"
-				}
-
-				"cheer"
-				{
-					"hotkey"	"7"
-					"label"	"Cheer"
-					"cmd"	"cheer"
-				}	
-				
-				"sorry"
-				{
-					"hotkey"	"8"
-					"label"	"Sorry"
-					"cmd"	"say_team Sorry!"
-				}	
-
-				"askfordrop"
-				{
-					"hotkey"	"9"
-					"label"	"Drop"
-					"cmd"	"needbackup; say_team Drop"
-				}	
+				}		
 			}
 		}
 	}
