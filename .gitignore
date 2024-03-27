@@ -5,18 +5,7 @@
 # config files
 /cfg/*
 /cfg/config/*
-/cfg/config/settings/*
 !/cfg/
 !/cfg/autoexec.cfg
 !/cfg/config/
 !/cfg/config/*.cfg
-!/cfg/config/settings/
-!/cfg/config/settings/*.cfg
-
-# resource files
-/resource/*
-/resource/ui/*
-!/resource/
-!/resource/csgo_colormod.txt
-!/resource/ui/
-!/resource/ui/radiopanel.txt

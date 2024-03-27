@@ -1,3 +1,3 @@
 # csgo
 
-Drag and drop this repository into the `'Steam\steamapps\common\Counter-Strike Global Offensive\game'` directory.
+Drag and drop the `cfg` folder into the `%ProgramFiles%\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo` directory.
